@@ -99,7 +99,7 @@ module.exports = {
         "hot-pink": "#fd2d78",
       },
       fontFamily: {
-        display: ["Londrina Solid","sans-serif","M PLUS Rounded 1c", ],
+        display: ["Londrina Solid","sans-serif" ],
         body: ["Poppins", "sans-serif"],
       },
       fontSize: {
