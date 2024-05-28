@@ -100,9 +100,9 @@
     @apply p-2;
   }
 
-  /* pre[class*="language-"] {
+  pre[class*="language-"] {
     margin-bottom: 2em;
-  } */
+  }
 
   table {
     @apply w-full text-left border-2 border-collapse mb-8 text-sm;
