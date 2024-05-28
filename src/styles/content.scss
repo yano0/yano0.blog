@@ -22,10 +22,10 @@
     @apply font-bold uppercase tracking-widest leading-none py-6;
   }
 
-/*  >p {
+  >p {
     @apply text-lg leading-relaxed;
     margin-bottom: 2em;
-  }*/
+  }
 
   /* > p:first-of-type {
         @apply text-2xl;
@@ -100,9 +100,9 @@
     @apply p-2;
   }
 
-  pre[class*="language-"] {
+  /* pre[class*="language-"] {
     margin-bottom: 2em;
-  }
+  } */
 
   table {
     @apply w-full text-left border-2 border-collapse mb-8 text-sm;
