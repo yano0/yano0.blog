@@ -6,13 +6,15 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+const heroPath = post.frontmatter.hero && (post.frontmatter.hero.startsWith('http') ? post.frontmatter.hero : `/yano0.blog${post.frontmatter.hero}`);
+const postUrl = `/yano0.blog${post.url}`;
 ---
 
-<a href={post.url}
+<a href={postUrl}
   class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden"
   data-test="article-card">
 
-  <img class="squiggle" src={post.frontmatter.hero} alt={post.frontmatter.title} width="360" height="192">
+  <img class="squiggle" src={heroPath} alt={post.frontmatter.title} width="360" height="192">
   <div class="py-6 px-8">
     <h2 class="font-bold text-2xl leading-tight">
       {post.frontmatter.title}
