@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { title, date, hero, youtube } = Astro.props;
-const heroPath = hero && (hero.startsWith('http') ? hero : `/yano0.blog${hero}`);
+const heroPath = hero && (hero.startsWith('http') ? hero : (hero.startsWith('/yano0.blog') ? hero : `/yano0.blog${hero}`));
 ---
 
 <article class="max-w-5xl mx-auto px-3">

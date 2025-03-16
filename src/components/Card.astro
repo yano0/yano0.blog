@@ -7,7 +7,7 @@ export interface Props {
 
 const { post } = Astro.props;
 const heroPath = post.frontmatter.hero && (post.frontmatter.hero.startsWith('http') ? post.frontmatter.hero : `/yano0.blog${post.frontmatter.hero}`);
-const postUrl = `/yano0.blog${post.url}`;
+const postUrl = post.url.startsWith('/yano0.blog') ? post.url : `/yano0.blog${post.url}`;
 ---
 
 <a href={postUrl}
