@@ -9,6 +9,7 @@ export interface Props {
 }
 
 const { title, date, hero, youtube } = Astro.props;
+const heroPath = hero && (hero.startsWith('http') ? hero : `/yano0.blog${hero}`);
 ---
 
 <article class="max-w-5xl mx-auto px-3">
@@ -17,7 +18,7 @@ const { title, date, hero, youtube } = Astro.props;
   </header>
 
   <!-- Image -->
-  {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="lazy" src={hero} alt={title} />}
+  {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="lazy" src={heroPath} alt={title} />}
 
   <!-- YouTube Video -->
   {youtube && <div class="embed-responsive aspect-ratio-16/9 mt-6 lg:mt-12">
